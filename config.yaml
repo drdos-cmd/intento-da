@@ -1,0 +1,8 @@
+app:
+  nombre: "Sistema de Agendamiento Citas"
+  entorno: "produccion-redhat"
+  puerto: 8080
+database:
+  host: "localhost"
+  puerto: 3306
+  nombre: "sistema_agendamiento"

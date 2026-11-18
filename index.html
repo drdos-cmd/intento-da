@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamiento de Citas - Red Hat Server</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+
+    <div class="max-w-4xl mx-auto p-6 mt-10 bg-gray-800 rounded-xl shadow-2xl border border-gray-700">
+        <header class="border-b border-gray-700 pb-4 mb-6">
+            <h1 class="text-3xl font-bold text-emerald-400">📅 Sistema de Agendamiento</h1>
+            <p class="text-sm text-gray-400 mt-1">Entorno optimizado para Red Hat Enterprise Linux</p>
+        </header>
+
+        <form id="formCita" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+                <label class="block text-sm font-medium mb-2">Documento del Cliente</label>
+                <input type="text" id="documento" required class="w-full bg-gray-700 border border-gray-600 rounded-lg p-2.5 focus:ring-2 focus:ring-emerald-400 outline-none" placeholder="Ej: 1020304050">
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium mb-2">Profesional</label>
+                <select id="profesional" required class="w-full bg-gray-700 border border-gray-600 rounded-lg p-2.5 focus:ring-2 focus:ring-emerald-400 outline-none">
+                    <option value="1">Dr. Carlos Mendoza (Odontología General)</option>
+                    <option value="2">Dra. Laura Torres (Ortodoncia)</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium mb-2">Servicio</label>
+                <select id="servicio" required class="w-full bg-gray-700 border border-gray-600 rounded-lg p-2.5 focus:ring-2 focus:ring-emerald-400 outline-none">
+                    <option value="1">Valoración Inicial (30 min)</option>
+                    <option value="2">Limpieza Dental (45 min)</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium mb-2">Fecha y Hora de Inicio</label>
+                <input type="datetime-local" id="fechaInicio" required class="w-full bg-gray-700 border border-gray-600 rounded-lg p-2.5 focus:ring-2 focus:ring-emerald-400 outline-none">
+            </div>
+
+            <div class="md:col-span-2">
+                <label class="block text-sm font-medium mb-2">Notas Adicionales</label>
+                <textarea id="notas" rows="3" class="w-full bg-gray-700 border border-gray-600 rounded-lg p-2.5 focus:ring-2 focus:ring-emerald-400 outline-none" placeholder="Observaciones del paciente..."></textarea>
+            </div>
+
+            <div class="md:col-span-2">
+                <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-600 font-bold py-3 px-4 rounded-lg transition duration-200 shadow-lg">
+                    Confirmar y Agendar Cita
+                </button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
